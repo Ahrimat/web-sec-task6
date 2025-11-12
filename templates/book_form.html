@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ action }} Book {% if book %}#{{ book.id }}{% endif %}</h2>
+<form method="post" class="book-form">
+  <label>Заголовок<br><input name="title" value="{{ form.title|default('') }}"></label>
+  {% if errors.title %}<div class="error">{{ errors.title }}</div>{% endif %}
+  <label>Автор<br><input name="author" value="{{ form.author|default('') }}"></label>
+  {% if errors.author %}<div class="error">{{ errors.author }}</div>{% endif %}
+  <label>Год<br><input name="year" value="{{ form.year|default('') }}"></label>
+  {% if errors.year %}<div class="error">{{ errors.year }}</div>{% endif %}
+  <label>ISBN<br><input name="isbn" value="{{ form.isbn|default('') }}"></label>
+  <label>Описание<br><textarea name="description">{{ form.description|default('') }}</textarea></label>
+  <div class="form-actions">
+    <button type="submit">{{ action }}</button>
+    <a href="{{ url_for('books.list_books') }}">Отмена</a>
+  </div>
+</form>
+{% endblock %}

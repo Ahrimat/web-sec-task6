@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Удаление книги</h2>
+<p>Удалить книгу <strong>{{ book.title }}</strong> автора {{ book.author }}?</p>
+<form method="post">
+  <button type="submit">Да</button>
+  <a href="{{ url_for('books.book_detail', book_id=book.id) }}">Отменить</a>
+</form>
+{% endblock %}

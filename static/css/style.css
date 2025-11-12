@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fb; color:#222; }
+.container { max-width:900px; margin:0 auto; padding:20px; }
+.header { background:#2b6cb0; color:white; padding:10px 0; margin-bottom:20px; }
+.header a { color:white; text-decoration:none; }
+.books-table { width:100%; border-collapse:collapse; background:white; }
+.books-table th, .books-table td { padding:8px 10px; border:1px solid #ddd; }
+.book-form label { display:block; margin-bottom:10px; }
+.book-form input[type=text], .book-form textarea { width:100%; padding:8px; box-sizing:border-box; }
+.form-actions { margin-top:10px; }
+.error { color:#b00020; font-size:0.9em; }
+.flashes { list-style:none; padding:0; }
+.flashes li { background:#e6ffed; border:1px solid #c0e7cc; padding:8px; margin-bottom:8px; }
+.search-form { margin-bottom:10px; }
